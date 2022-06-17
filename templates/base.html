@@ -1,0 +1,133 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <title>{% block head_title %}{% endblock head_title %}Robert Jauss</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5/css/materialdesignicons.min.css">
+  <link rel="shortcut icon" href="{% static 'images/icons/favicon.png' %}" type="image/png">
+  <link rel="icon" href="{% static 'images/icons/favicon.png' %}" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2/dist/vuetify.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% block meta %}{% endblock %}
+  {% block additional_header %}{% endblock %}
+</head>
+<body>
+  <v-app id="app" v-cloak>
+    <v-app-bar app>
+      <v-app-bar-nav-icon
+        @click.stop="sidebar = !sidebar"
+        class="d-md-none"
+      ></v-app-bar-nav-icon>
+      <v-toolbar-title>
+        <a href="{% url "home" %}" class="text-decoration-none white--text text-h4">
+          Robert Jauss
+        </a>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="d-none d-md-flex">
+        <v-btn
+          text
+          :href="link.url"
+          v-for="link in navItems"
+          :key="link.name"
+        >
+          [[ link.name ]]
+        </v-btn>
+      </v-toolbar-items>
+    </v-app-bar>
+
+    <v-navigation-drawer
+      app
+      class="d-md-none"
+      v-model="sidebar"
+    >
+      <v-list nav>
+        <v-list-item
+          v-for="link in navItems"
+          :key="link.name"
+          :href="link.url"
+        >
+          <v-list-item-content>
+            <v-list-item-title>[[ link.name ]]</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+      <v-main class="mb-16">
+        {% block content %}{% endblock %}
+      </v-main>
+    <v-footer app absolute padless>
+      <v-card flat tile width="100%" class="text-center">
+{#        <v-card-text>#}
+{#          <v-btn icon class="mx-4" href="https://twitter.com/RealSheriBot">#}
+{#            <v-icon>mdi-twitter</v-icon>#}
+{#          </v-btn>#}
+{#          <v-btn icon class="mx-4" href="https://t.me/joinchat/KICybv8xRcM1OTJh">#}
+{#            <v-icon>mdi-telegram</v-icon>#}
+{#          </v-btn>#}
+{#          <v-btn icon class="mx-4" href="https://discord.gg/D55TUhc">#}
+{#            <v-icon>mdi-discord</v-icon>#}
+{#          </v-btn>#}
+{#          <v-btn icon class="mx-4" href="https://www.patreon.com/bePatron?u=5212121&redirect_uri=https%3A%2F%2Fsheri.bot%2F&utm_medium=widget">#}
+{#            <v-icon>mdi-patreon</v-icon>#}
+{#          </v-btn>#}
+{#        </v-card-text>#}
+{#        <v-divider></v-divider>#}
+        <v-card-text class="text-body-1">
+          Copyright 2019 - {% now 'Y' %} Robert Jauss
+          &bullet;
+          <a href="#">
+            Privacy Policy
+          </a>
+        </v-card-text>
+      </v-card>
+    </v-footer>
+  </v-app>
+
+{#  {% if debug %}#}
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+{#  {% else %}#}
+{#    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>#}
+{#  {% endif %}#}
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2/dist/vuetify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-resource@1/dist/vue-resource.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js" integrity="sha256-DIsAGD2EF8Qq2PCH9yzX/yt9FliJfWf+aGcdgR6tKwo=" crossorigin="anonymous"></script>
+  {% block additional_vue_scripts %}{% endblock %}
+  <script>
+      const None = null
+      const False = false
+      const True = true
+      {% block vue_use %}{% endblock %}
+      const app = new Vue({
+      delimiters: ['[[', ']]'],
+      el: '#app',
+      vuetify: new Vuetify({
+        theme: {
+          dark: true,
+        },
+      }),
+      data: {
+        sidebar: false,
+        navItems: [
+          {name: 'About', url: '#'},
+          {name: 'Resume', url: '#'},
+          {name: 'Projects', url: '#'},
+          {name: 'Contact', url: '#'},
+        ],
+        {% block data %}{% endblock %}
+      },
+      methods: {% block methods %}{}{% endblock %},
+      watch: {% block watch %}{}{% endblock %},
+      computed: {% block computed %}{}{% endblock %},
+      mounted() {% block mounted %}{}{% endblock %}
+    });
+  </script>
+  {% block additional_js %}{% endblock %}
+
+</body>
+</html>
