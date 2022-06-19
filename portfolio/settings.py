@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(int(os.environ.get("DEBUG", 0)))
 
-ALLOWED_HOSTS = ["jauss.dev", "www.jauss.dev"]
+ALLOWED_HOSTS = ["jauss.dev", "www.jauss.dev", "127.0.0.1"]
 
 
 # Application definition

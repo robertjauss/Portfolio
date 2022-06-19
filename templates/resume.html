@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}Resume | {% endblock %}
+
+
+{% block content %}
+<v-container>
+  <v-card class="mx-auto mt-6">
+    <v-card-text class="text-body-1">
+      <h2 class="text-h2">Robert Jauss</h2>
+      <h6 class="text-h6"><a href="mailto:robert@jauss.dev">robert@jauss.dev</a></h6>
+      <a href="https://www.linkedin.com/in/robert-jauss-48a42637/" target="_blank" class="text-decoration-none"><v-icon>mdi-linkedin</v-icon> LinkedIn</a>
+
+      <h5 class="text-h5 mt-16">About</h5>
+      <p class="mb-16">I'm a full stack Python developer, with almost exclusively on-the-job training and experience. Not having a
+        typical classroom learning experience has taught me to think outside the box, figure out bespoke solutions to
+        complex problems, and to meet and exceed the needs of the customer.</p>
+
+      <h5 class="text-h5">Experience</h5>
+      <v-timeline reverse>
+
+        <v-timeline-item>
+          <span slot="opposite">January 2022 - Present</span>
+          <v-card color="secondary">
+            <v-card-title class="text-h5 solidigm font-weight-medium">Solidigm</v-card-title>
+            <v-card-text class="text-body-1">
+              <p class="text-h6 mt-3"><v-icon left>mdi-badge-account-horizontal</v-icon>Lead Engineer</p>
+              <p><v-icon left>mdi-map-marker</v-icon>Folsom, California, United States</p>
+              <p>Python and Powershell automation test development for enterprise SSDs. Web development with Django and
+                Vue.js, leading a small team and turning large data sets into easily consumable dashboards.</p>
+              <p>Transitioned directly from Intel after SK Hynix purchased Intel's NSG division.</p>
+            </v-card-text>
+          </v-card>
+          <template v-slot:icon>
+            <v-avatar color="#4F00B4">
+              <img src="{% static "images/solidigm-64.jpg" %}" alt="Solidigm logo">
+            </v-avatar>
+          </template>
+        </v-timeline-item>
+
+        <v-timeline-item>
+          <span slot="opposite">January 2013 - Present</span>
+          <v-card color="secondary">
+            <v-card-title class="text-h5 furhost font-weight-medium">FurHost</v-card-title>
+            <v-card-text class="text-body-1">
+              <p class="text-h6 mt-3"><v-icon left>mdi-badge-account-horizontal</v-icon>Owner</p>
+              <p><v-icon left>mdi-map-marker</v-icon> <a href="https://furhost.net" target="_blank" class="text-decoration-none">https://furhost.net</a></p>
+              <p>Web hosting, server colocation, and managed website design and maintenance, catered to the
+              furry community.</p>
+              <p>I own and maintain several servers in a data center, maintain client data privacy, and have designed
+              and maintained several websites for clients directly.</p>
+            </v-card-text>
+          </v-card>
+          <template v-slot:icon>
+            <v-avatar color="#1FB3DD">
+              <img src="{% static "images/furhost.png" %}" alt="FurHost logo">
+            </v-avatar>
+          </template>
+        </v-timeline-item>
+
+        <v-timeline-item>
+          <span slot="opposite">July 2021 - January 2022</span>
+          <v-card color="secondary">
+            <v-card-title class="text-h5 intel font-weight-medium">Intel Corporation</v-card-title>
+            <v-card-text class="text-body-1">
+              <p class="text-h6 mt-3"><v-icon left>mdi-badge-account-horizontal</v-icon>Lead Engineer</p>
+              <p><v-icon left>mdi-map-marker</v-icon> Folsom, California, United States</p>
+              <p>Lead Engineer, focusing on client and enterprise SSD firmware validation via Python automation
+                testing.</p>
+            </v-card-text>
+          </v-card>
+          <template v-slot:icon>
+            <v-avatar color="#31C5F3">
+              <img src="{% static "images/intel-64.jpg" %}" alt="Intel logo">
+            </v-avatar>
+          </template>
+        </v-timeline-item>
+
+        <v-timeline-item small fill-dot color="#31C5F3">
+          <span slot="opposite">January 2019 - July 2021</span>
+          <v-card color="secondary">
+            <v-card-text class="text-body-1">
+              <p class="text-h6"><v-icon left>mdi-badge-account-horizontal</v-icon>Python Automation Engineer</p>
+              <p>Conceptualize, design, develop, and implement internal tools, APIs, and more for data driven reporting
+                and firmware testing on Intel products. Technologies used include Python, Django, Gerrit, QuickBuild,
+                and more.</p>
+            </v-card-text>
+          </v-card>
+        </v-timeline-item>
+
+        <v-timeline-item small fill-dot color="#31C5F3">
+          <span slot="opposite">April 2018 - January 2019</span>
+          <v-card color="secondary">
+            <v-card-text class="text-body-1">
+              <p class="text-h6"><v-icon left>mdi-badge-account-horizontal</v-icon>Python Web Developer</p>
+              <p>Developed internal web apps and tools for reporting on automation testing, gathering and massaging
+                data, and displaying on custom dashboards for quick, accurate consumption of data.</p>
+              <p>Development used a combination of Python 3.6 / Django, Vue with Nuxt.js, Feathers.js, IIS on Windows
+                server, NGINX on Debian, and Docker.</p>
+            </v-card-text>
+          </v-card>
+        </v-timeline-item>
+
+        <v-timeline-item small fill-dot color="#31C5F3">
+          <span slot="opposite">April 2017 - April 2019</span>
+          <v-card color="secondary">
+            <v-card-text class="text-body-1">
+              <p class="text-h6"><v-icon left>mdi-badge-account-horizontal</v-icon>Enterprise SSD Firmware Execution Technician</p>
+              <p>Performed batteries of tests on enterprise-grade SSDs in active development using automation scripts
+                developed internally. Debug and log test failure reasons, as well as perform more in-depth analysis as
+                needed using oscilloscopes and Teledyne Lecroy machines.</p>
+            </v-card-text>
+          </v-card>
+        </v-timeline-item>
+
+        <v-timeline-item>
+          <span slot="opposite">April 2016 - March 2017</span>
+          <v-card color="secondary">
+            <v-card-title class="text-h5 yellow black--text font-weight-medium">DeBug Computer</v-card-title>
+            <v-card-text class="text-body-1">
+              <p class="text-h6 mt-3"><v-icon left>mdi-badge-account-horizontal</v-icon>Computer Technician</p>
+              <p><v-icon left>mdi-map-marker</v-icon> Carson City, Nevada, United States</p>
+              <p>In-office and in-home computer repair and maintenance, server setup, and hardware installation.</p>
+            </v-card-text>
+          </v-card>
+          <template v-slot:icon>
+            <v-avatar color="yellow">
+              <img src="{% static "images/debug-64.jpg" %}" alt="DeBug Computer logo">
+            </v-avatar>
+          </template>
+        </v-timeline-item>
+
+        <v-timeline-item>
+          <span slot="opposite">September 2013 - April 2016</span>
+          <v-card color="secondary">
+            <v-card-title class="text-h5 geek-squad black--text font-weight-medium">Geek Squad</v-card-title>
+            <v-card-text class="text-body-1">
+              <p class="text-h6 mt-3"><v-icon left>mdi-badge-account-horizontal</v-icon>Double Agent Covert</p>
+              <p><v-icon left>mdi-map-marker</v-icon> Carson City, Nevada, United States</p>
+              <p>Responsible for in-home computer repair and troubleshooting for the Carson City, NV area, as well as
+                online remote tech support.</p>
+            </v-card-text>
+          </v-card>
+          <template v-slot:icon>
+            <v-avatar color="#E37222">
+              <img src="{% static "images/geek_squad-64.jpg" %}" alt="Geek Squad logo">
+            </v-avatar>
+          </template>
+        </v-timeline-item>
+
+        <v-timeline-item>
+          <span slot="opposite">November 2011 - February 2013</span>
+          <v-card color="secondary">
+            <v-card-title class="text-h5 red font-weight-medium">Target Mobile</v-card-title>
+            <v-card-text class="text-body-1">
+              <p class="text-h6 mt-3"><v-icon left>mdi-badge-account-horizontal</v-icon>Store Manager</p>
+              <p><v-icon left>mdi-map-marker</v-icon> Salinas, California, United States</p>
+              <p>Managed employees across 3 separate stores along the central coast, responsible for scheduling,
+                payroll, inventory, sales goals, and all staffing decisions. Position defunct after parent company
+                Radio Shack went out of business.</p>
+            </v-card-text>
+          </v-card>
+          <template v-slot:icon>
+            <v-avatar color="red">
+              <img src="{% static "images/radioshack-64.jpg" %}" alt="Radioshack logo">
+            </v-avatar>
+          </template>
+        </v-timeline-item>
+
+        <v-timeline-item>
+          <span slot="opposite">April 2009 - November 2011</span>
+          <v-card color="secondary">
+            <v-card-title class="text-h5 blue font-weight-medium">Bookette Software</v-card-title>
+            <v-card-text class="text-body-1">
+              <p class="text-h6 mt-3"><v-icon left>mdi-badge-account-horizontal</v-icon>Web Content Specialist</p>
+              <p><v-icon left>mdi-map-marker</v-icon> Monterey, California, United States</p>
+              <p>Design and develop interactive online standardized tests for K-12 school nationwide, using Python,
+              JavaScript, and Adobe Flash.</p>
+            </v-card-text>
+          </v-card>
+          <template v-slot:icon>
+            <v-avatar color="blue">
+              <img src="{% static "images/bookette-64.jpg" %}" alt="Bookette Software logo">
+            </v-avatar>
+          </template>
+        </v-timeline-item>
+
+        <v-timeline-item>
+          <span slot="opposite">November 2006 - March 2008</span>
+          <v-card color="secondary">
+            <v-card-title class="text-h5 black font-weight-medium">US Army</v-card-title>
+            <v-card-text class="text-body-1">
+              <p class="text-h6 mt-3"><v-icon left>mdi-badge-account-horizontal</v-icon>35F Intelligence Analyst</p>
+              <p><v-icon left>mdi-map-marker</v-icon> Torii Station, Okinawa, Japan</p>
+              <p>Responsible for in-home computer repair and troubleshooting for the Carson City, NV area, as well as
+                online remote tech support.</p>
+            </v-card-text>
+          </v-card>
+          <template v-slot:icon>
+            <v-avatar color="black">
+              <img src="{% static "images/army-64.jpg" %}" alt="US Army logo">
+            </v-avatar>
+          </template>
+        </v-timeline-item>
+
+      </v-timeline>
+    </v-card-text>
+  </v-card>
+</v-container>
+{% endblock %}

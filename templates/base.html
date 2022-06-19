@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-  <title>{% block head_title %}{% endblock head_title %}Robert Jauss</title>
+  <title>{% block title %}{% endblock title %}Robert Jauss</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5/css/materialdesignicons.min.css">
   <link rel="shortcut icon" href="{% static 'images/icons/favicon.png' %}" type="image/png">
@@ -114,10 +114,9 @@
       data: {
         sidebar: false,
         navItems: [
-          {name: 'About', url: '#'},
-          {name: 'Resume', url: '#'},
-          {name: 'Projects', url: '#'},
-          {name: 'Contact', url: '#'},
+          {name: 'About', url: '{% url "about" %}'},
+          {name: 'Resume', url: '{% url "resume" %}'},
+          {name: 'Projects', url: '{% url "projects" %}'},
         ],
         {% block data %}{% endblock %}
       },

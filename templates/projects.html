@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}Projects | {% endblock %}
+
+
+{% block content %}
+<v-container>
+  <h4 class="text-h4 my-6">Noteworthy Projects</h4>
+  <p class="text-body-1">Along with the projects listed here, there are several large-scale projects in active
+  development at my current employer, Solidigm, which, for legal reasons, cannot be shown here.</p>
+
+  <v-row>
+    <v-col cols="12" lg="6">
+      <v-card>
+        <v-img src="{% static "images/sheri.bot.jpg" %}" contain></v-img>
+        <v-card-text class="text-body-1">
+          <h5 class="text-h5 mb-6">Sheri Blossom &ndash; <a href="https://sheri.bot" target="_blank">Project Website</a></h5>
+          <p>An online dashboard for an interactive, customizable Discord bot. I am the lead web developer on this team
+            of 30+ volunteers. Website and Discord Bot are actively in use by approx. 1,786,808 users across 59,642
+            Discord servers.</p>
+          <p>Authorization is tied to your Discord account, utilizing OAUTH2. Data is stored in PostgreSQL, and fetched
+          live by the bot using a Redis cache as a middleman to speed up transactions. Services running across 3
+          separate VMs intercommunicating to process millions of user messages a day.</p>
+          <p>The website is a combination of a Django backend, a REST API, PostgreSQL database, Redis cache, and Vue.js
+            frontend with the Vuetify component library. The Discord bot itself is pure Python, utilizing the Discord.py
+            library for connection to the Discord API. With tens of thousands of lines of code, this is by far the
+            largest project I have helped create.</p>
+        </v-card-text>
+      </v-card>
+    </v-col>
+    <v-col cols="12" lg="6">
+      <v-card>
+        <v-img src="{% static "images/acnh.jpg" %}" contain></v-img>
+        <v-card-text class="text-body-1">
+          <h5 class="text-h5 mb-6">AC:NH Tools &ndash; <a href="https://animalcrossing.tools" target="_blank">Project Website</a></h5>
+          <p>A simple, stylized website solely designed to help people track their tool durability in
+          the Nintendo Switch game Animal Crossing: New Horizons.</p>
+          <p>Utilizing the same Django/Vue combination I've become increasingly proficient in, this website didn't
+          quite challenge me so much as allow me to make something I could genuinely use, and figured others might want
+          to use it as well. Starting off much more plain, I added a theme to match the style of the game itself
+          to spruce it up.</p>
+        </v-card-text>
+      </v-card>
+    </v-col>
+    <v-col cols="12" lg="6">
+      <v-card>
+        <v-img src="{% static "images/mfbooks.jpg" %}" contain></v-img>
+        <v-card-text class="text-body-1">
+          <h5 class="text-h5 mb-6">Mike Freney Books &ndash; <a href="https://mikefreneybooks.com" target="_blank">Project Website</a></h5>
+          <p>An e-commerce site taking advantage of the OpenCart framework to support author Mike Freney.</p>
+          <p>The framework is composed of PHP and jQuery primarily, with a MariaDB database.</p>
+        </v-card-text>
+      </v-card>
+    </v-col>
+    <v-col cols="12" lg="6">
+      <v-card>
+        <v-img src="{% static "images/furhost-website.jpg" %}" contain></v-img>
+        <v-card-text class="text-body-1">
+          <h5 class="text-h5 mb-6">FurHost &ndash; <a href="https://furhost.net" target="_blank">Project Website</a></h5>
+          <p>A web hosting company I run, with a frontend to allow customers to purchase domains, hosting, VPS, and
+            colocation services, with everything (except colo, of course) provisioned automatically via Plesk.</p>
+          <p>Running on my own hardware since 2016, there has been years of optimization dedicated to lowering downtime
+          to zero and maintaining a robust backup system with a dedicated 12 TB JBOD serving 6 physical servers.</p>
+        </v-card-text>
+      </v-card>
+    </v-col>
+  </v-row>
+</v-container>
+{% endblock %}
