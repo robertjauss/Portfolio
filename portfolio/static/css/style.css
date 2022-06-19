@@ -13,3 +13,19 @@
 .geek-squad {
     background-color: #E37222;
 }
+#app {
+    background: linear-gradient(-45deg, #000000, #4A148C, #1A237E, #212121);
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
