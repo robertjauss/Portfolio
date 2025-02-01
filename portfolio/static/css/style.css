@@ -1,18 +1,30 @@
 [v-cloak] > * {
     display: none;
 }
+.verizon {
+    background-color: #f60923;
+    border-color: #f60923;
+}
 .solidigm {
     background-color: #4F00B4;
+    border-color: #4F00B4;
 }
 .furhost {
     background-color: #1FB3DD;
+    border-color: #1FB3DD;
 }
 .intel {
     background-color: #31C5F3;
+    border-color: #31C5F3;
 }
 .geek-squad {
     background-color: #E37222;
+    border-color: #E37222;
 }
+.target {
+      background-color: #cc0000;
+      border-color: #cc0000;
+  }
 #app {
     background: linear-gradient(-45deg, #000000, #4A148C, #1A237E, #212121);
     background-size: 400% 400%;

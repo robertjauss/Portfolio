@@ -25,6 +25,36 @@
       <v-timeline :reverse="!isMobile" :dense="isMobile">
 
         <v-timeline-item>
+          <span slot="opposite" v-show="!isMobile">October 2023 - Present</span>
+          <v-card color="secondary">
+            <v-card-title class="text-h5 verizon font-weight-medium">Verizon</v-card-title>
+            <v-card-text class="text-body-1">
+              <p class="text-h6 mt-3"><v-icon left>mdi-badge-account-horizontal</v-icon>Senior Software Engineer</p>
+              <p><v-icon left>mdi-map-marker</v-icon>Temple Terrace, Florida, United States (Remote)</p>
+              <p v-show="isMobile"><v-icon left>mdi-calendar</v-icon>October 2023 - Present</p>
+              <p>
+                The primary focus of this role was automating the generation of configuration files for wireless
+                networking hardware to facilitate the installation and migration of cellular routers. Originally using
+                a premade solution that was shimmed into place, and years behind schedule, I helped spearhead a new,
+                bespoke solution using Django.
+              </p>
+              <p>
+                Using Django, the Django Rest Framework, Jinja2, Docker, Kubernetes, and about a decade of experience,
+                me and a coworker fully replaced an $8 million/year licensed software tool with an in-house solution,
+                delivering drastically faster results, faster development, and fine-tuned error handling. Verizon has
+                officially adopted this in-house solution, and it is now a vital part of the cellular hardware
+                deployment workflow.
+              </p>
+            </v-card-text>
+          </v-card>
+          <template v-slot:icon>
+            <v-avatar color="#FFF">
+              <img src="{% static "images/Verizon_GlowV_RGB.png" %}" alt="Verizon logo">
+            </v-avatar>
+          </template>
+        </v-timeline-item>
+
+        <v-timeline-item>
           <span slot="opposite" v-show="!isMobile">January 2022 - June 2023</span>
           <v-card color="secondary">
             <v-card-title class="text-h5 solidigm font-weight-medium">Solidigm</v-card-title>
@@ -221,7 +251,7 @@
         <v-timeline-item>
           <span slot="opposite" v-show="!isMobile">November 2011 - February 2013</span>
           <v-card color="secondary">
-            <v-card-title class="text-h5 red font-weight-medium">Target Mobile</v-card-title>
+            <v-card-title class="text-h5 target font-weight-medium">Target Mobile</v-card-title>
             <v-card-text class="text-body-1">
               <p class="text-h6 mt-3"><v-icon left>mdi-badge-account-horizontal</v-icon>Store Manager</p>
               <p><v-icon left>mdi-map-marker</v-icon> Salinas, California, United States</p>
@@ -270,8 +300,8 @@
               <p><v-icon left>mdi-map-marker</v-icon> Torii Station, Okinawa, Japan</p>
               <p v-show="isMobile"><v-icon left>mdi-calendar</v-icon>November 2006 - March 2008</p>
               <p>
-                Responsible for in-home computer repair and troubleshooting for the Carson City, NV area, as well as
-                online remote tech support.
+                Responsible for gathering information from intelligence sources, preparing and delivering briefings to deploying
+                personnel, and offering threat assessment in the field. Most of this role was under a TS/SCI clearance.
               </p>
             </v-card-text>
           </v-card>
