@@ -9,9 +9,10 @@
 <v-container>
   <h4 class="text-h4 my-6">Noteworthy Projects</h4>
   <p class="text-body-1">Along with the projects listed here, there are several large-scale projects in active
-  development at my current employer, Solidigm, which, for legal reasons, cannot be shown here.</p>
+  development at my current employer, Verizon, which, for legal reasons, cannot be shown here.</p>
 
   <v-row>
+
     <v-col cols="12" lg="6">
       <v-card>
         <v-img src="{% static "images/sheri.bot.jpg" %}" contain></v-img>
@@ -20,30 +21,33 @@
           <p>An online dashboard for an interactive, customizable Discord bot. I am the lead web developer on this team
             of 30+ volunteers. Website and Discord Bot are actively in use by approx. 1,786,808 users across 59,642
             Discord servers.</p>
-          <p>Authorization is tied to your Discord account, utilizing OAUTH2. Data is stored in PostgreSQL, and fetched
-          live by the bot using a Redis cache as a middleman to speed up transactions. Services running across 3
+          <p>Authorization is tied to your Discord account, using OAUTH2. Data is stored in PostgreSQL, and fetched
+          live by the bot using a Redis cache as an intermediary to speed up transactions. Services running across 3
           separate VMs intercommunicating to process millions of user messages a day.</p>
           <p>The website is a combination of a Django backend, a REST API, PostgreSQL database, Redis cache, and Vue.js
-            frontend with the Vuetify component library. The Discord bot itself is pure Python, utilizing the Discord.py
+            frontend with the Vuetify component library. The Discord bot itself is pure Python, using the Discord.py
             library for connection to the Discord API. With tens of thousands of lines of code, this is by far the
             largest project I have helped create.</p>
         </v-card-text>
       </v-card>
     </v-col>
+
     <v-col cols="12" lg="6">
       <v-card>
-        <v-img src="{% static "images/acnh.jpg" %}" contain></v-img>
+        <v-img src="{% static "images/eleganthome.cooking.jpg" %}" contain></v-img>
         <v-card-text class="text-body-1">
-          <h5 class="text-h5 mb-6">AC:NH Tools &ndash; <a href="https://animalcrossing.tools" target="_blank">Project Website</a></h5>
-          <p>A simple, stylized website solely designed to help people track their tool durability in
-          the Nintendo Switch game Animal Crossing: New Horizons.</p>
-          <p>Utilizing the same Django/Vue combination I've become increasingly proficient in, this website didn't
-          quite challenge me so much as allow me to make something I could genuinely use, and figured others might want
-          to use it as well. Starting off much more plain, I added a theme to match the style of the game itself
-          to spruce it up.</p>
+          <h5 class="text-h5 mb-6">Elegant Home Cooking &ndash; <a href="https://eleganthome.cooking" target="_blank">Project Website</a></h5>
+          <p>
+            A business website for a personal chef, showcasing both the skill of the chef with plenty of food imagery,
+            as well as providing a list of services, their prices, and a contact form for submitting requests.
+          </p>
+          <p>
+            Built using Django and Vue.js for the frontend, and a simple Google form for submission.
+          </p>
         </v-card-text>
       </v-card>
     </v-col>
+
     <v-col cols="12" lg="6">
       <v-card>
         <v-img src="{% static "images/mfbooks.jpg" %}" contain></v-img>
@@ -54,6 +58,7 @@
         </v-card-text>
       </v-card>
     </v-col>
+
     <v-col cols="12" lg="6">
       <v-card>
         <v-img src="{% static "images/furhost-website.jpg" %}" contain></v-img>
@@ -66,6 +71,7 @@
         </v-card-text>
       </v-card>
     </v-col>
+
   </v-row>
 </v-container>
 {% endblock %}
