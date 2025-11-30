@@ -1,4 +1,4 @@
-My Django Project
+Robert's Portfolio - Jauss.dev
 ===================
 
 Overview
@@ -35,4 +35,4 @@ Getting Started
 License
 -------
 
-This project is licensed under [Apache-2.0 license](NOTICE).
+This project is licensed under [Apache-2.0 license](LICENSE).
