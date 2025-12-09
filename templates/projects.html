@@ -10,16 +10,94 @@
   <h4 class="text-h4 my-6">Noteworthy Projects</h4>
   <p class="text-body-1">Along with the projects listed here, there are several large-scale projects in active
   development at my current employer, Verizon, which, for legal reasons, cannot be shown here.</p>
+  <p class="text-body-1">These are just the projects I have mirrored to my GitHub as well, many of my projects are in
+  a private repo on a self-hosted Gitea instance.</p>
 
   <v-row>
 
     <v-col cols="12" lg="6">
       <v-card>
-        <v-img src="{% static "images/sheri.bot.jpg" %}" contain></v-img>
+        <v-img src="{% static "images/Portfolio.jpg" %}" contain></v-img>
         <v-card-text class="text-body-1">
-          <h5 class="text-h5 mb-6">Sheri Blossom &ndash; <a href="https://sheri.bot" target="_blank">Project Website</a></h5>
+          <h5 class="text-h5">Portfolio &ndash; <a href="https://jauss.dev" target="_blank" class="text-decoration-none">Project Website</a></h5>
+          <span class="text-subtitle-1 mb-6">
+            <a href="https://github.com/robertjauss/Portfolio" target="_blank" class="text-decoration-none">GitHub repository</a>
+          </span>
+          <p>This website you're visiting right now! An online showcase of my work history, skillset, and links to
+            projects I've worked on. A combination of Django and Vue.js using the Vuetify component library, it's the
+            combination I used for years for many of my side projects, and even at some of my employers, like Intel and
+            Solidigm.</p>
+          <p>I've moved to using Django and Web Awesome for newer projects, as shown in several other projects on this
+            page. I've kept the overall design simple, with a few splashes of color and flair to spiff it up.</p>
+        </v-card-text>
+      </v-card>
+    </v-col>
+
+    <v-col cols="12" lg="6">
+      <v-card>
+        <v-img src="{% static "images/AidasTasks.jpg" %}" contain></v-img>
+        <v-card-text class="text-body-1">
+          <h5 class="text-h5">Aida's Tasks &ndash; <a href="https://demo.aidaslist.xyz" target="_blank" class="text-decoration-none">Project Website</a></h5>
+          <span class="text-subtitle-1 mb-6">
+            <a href="https://github.com/robertjauss/aidas-list" target="_blank" class="text-decoration-none">GitHub repository</a>
+          </span>
+          <p>A task tracking web app, built for simplicity. Originally designed to help a long-time client who needs
+            computer assistance every now and then to keep track of what she needs help with, letting me see what
+            tasks she has for me before we even connect.</p>
+          <p>Built using Django and Web Awesome, my new go-to stack, deployed via Docker and Docker Compose. I kept
+            the interface simple, colorful, and large enough to be easily navigated by the target audience.</p>
+        </v-card-text>
+      </v-card>
+    </v-col>
+
+    <v-col cols="12" lg="6">
+      <v-card>
+        <v-img src="{% static "images/PatreonRaffle.jpg" %}" contain></v-img>
+        <v-card-text class="text-body-1">
+          <h5 class="text-h5">Patreon Raffle &ndash; <a href="https://patreonraffle.app" target="_blank" class="text-decoration-none">Project Website</a></h5>
+          <span class="text-subtitle-1 mb-6">
+            <a href="https://github.com/robertjauss/patreon-raffle" target="_blank" class="text-decoration-none">GitHub repository</a>
+          </span>
+          <p>A simple-to-use app for selecting winners for raffles and giveaways. Geared towards Patreon, as the idea
+            came from a Patreon creator who couldn't find an easy way to select multiple winners for giveaways.</p>
+          <p>Entering one user per line, selecting the number of winners, and optionally a number of bonus winners,
+            the app will run through the list and choose winners for you, showing them in a couple different ways to
+            make for good screenshots for Patreon posts. It's open for anybody to use, so give it a shot over at
+            <a href="https://patreonraffle.app" target="_blank">https://patreonraffle.app</a>. No login, no accounts,
+            no tracking, no limits.</p>
+          <p>Built using the same Django and Web Awesome stack as several other projects, this one was fun to make and
+            customize for the client.</p>
+        </v-card-text>
+      </v-card>
+    </v-col>
+
+    <v-col cols="12" lg="6">
+      <v-card>
+        <v-img src="{% static "images/RocketAudit.jpg" %}" contain></v-img>
+        <v-card-text class="text-body-1">
+          <h5 class="text-h5">Rocket Audit</h5>
+          <span class="text-subtitle-1 mb-6">
+            <a href="https://github.com/robertjauss/RocketAudit" target="_blank" class="text-decoration-none">GitHub repository</a>
+          </span>
+          <p>A simple admin dashboard for moderating user DMs in a Rocket.Chat instance. Such tools are normally only
+            available in the enterprise (i.e. paid) editions of Rocket.Chat, but this uses the RC API to give that
+            functionality to the masses. Definitely helps with community chats to make sure nothing against TOS is
+            going on in DMs.</p>
+          <p>Built using the same Django and Web Awesome stack as several other projects, this one was made out of
+            necessity. Running my own Rocket.Chat instance for a niche online community and needing to keep members
+            safe from bad actors, but without needing to purchase a 5-figure license just for moderation tools. This
+            project has turned out to be very useful for myself and several others who run their own chats.</p>
+        </v-card-text>
+      </v-card>
+    </v-col>
+
+    <v-col cols="12" lg="6">
+      <v-card>
+        <v-img src="{% static "images/SheriBlossom.jpg" %}" contain></v-img>
+        <v-card-text class="text-body-1">
+          <h5 class="text-h5 mb-6">Sheri Blossom &ndash; <a href="https://sheri.bot" target="_blank" class="text-decoration-none">Project Website</a></h5>
           <p>An online dashboard for an interactive, customizable Discord bot. I am the lead web developer on this team
-            of 30+ volunteers. Website and Discord Bot are actively in use by approx. 1,786,808 users across 59,642
+            of 30+ volunteers. Website and Discord Bot are actively in use by approx. 880,000 users across 15,000
             Discord servers.</p>
           <p>Authorization is tied to your Discord account, using OAUTH2. Data is stored in PostgreSQL, and fetched
           live by the bot using a Redis cache as an intermediary to speed up transactions. Services running across 3
@@ -36,7 +114,7 @@
       <v-card>
         <v-img src="{% static "images/eleganthome.cooking.jpg" %}" contain></v-img>
         <v-card-text class="text-body-1">
-          <h5 class="text-h5 mb-6">Elegant Home Cooking &ndash; <a href="https://eleganthome.cooking" target="_blank">Project Website</a></h5>
+          <h5 class="text-h5 mb-6">Elegant Home Cooking &ndash; <a href="https://eleganthome.cooking" target="_blank" class="text-decoration-none">Project Website</a></h5>
           <p>
             A business website for a personal chef, showcasing both the skill of the chef with plenty of food imagery,
             as well as providing a list of services, their prices, and a contact form for submitting requests.
@@ -52,7 +130,7 @@
       <v-card>
         <v-img src="{% static "images/mfbooks.jpg" %}" contain></v-img>
         <v-card-text class="text-body-1">
-          <h5 class="text-h5 mb-6">Mike Freney Books &ndash; <a href="https://mikefreneybooks.com" target="_blank">Project Website</a></h5>
+          <h5 class="text-h5 mb-6">Mike Freney Books &ndash; <a href="https://mikefreneybooks.com" target="_blank" class="text-decoration-none">Project Website</a></h5>
           <p>An e-commerce site taking advantage of the OpenCart framework to support author Mike Freney.</p>
           <p>The framework is composed of PHP and jQuery primarily, with a MariaDB database.</p>
         </v-card-text>
@@ -63,7 +141,7 @@
       <v-card>
         <v-img src="{% static "images/furhost-website.jpg" %}" contain></v-img>
         <v-card-text class="text-body-1">
-          <h5 class="text-h5 mb-6">FurHost &ndash; <a href="https://furhost.net" target="_blank">Project Website</a></h5>
+          <h5 class="text-h5 mb-6">FurHost &ndash; <a href="https://furhost.net" target="_blank" class="text-decoration-none">Project Website</a></h5>
           <p>A web hosting company I run, with a frontend to allow customers to purchase domains, hosting, VPS, and
             colocation services, with everything (except colo, of course) provisioned automatically via Plesk.</p>
           <p>Running on my own hardware since 2016, there has been years of optimization dedicated to lowering downtime
